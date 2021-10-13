@@ -11,6 +11,8 @@ const firebaseConfig = {
 const app = firebase.initializeApp(firebaseConfig);
 const auth = app.auth();
 const db = app.firestore();
+const getFirebaseServerTimestamp =
+  firebase.firestore.FieldValue.serverTimestamp;
 const googleProvider = new firebase.auth.GoogleAuthProvider();
 const signInWithGoogle = async () => {
   try {
@@ -69,9 +71,11 @@ const sendPasswordResetEmail = async (email) => {
 const logout = async () => {
   await auth.signOut();
 };
+
 export {
   auth,
   db,
+  getFirebaseServerTimestamp,
   signInWithGoogle,
   signInWithEmailAndPassword,
   registerWithEmailAndPassword,
