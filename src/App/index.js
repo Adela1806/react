@@ -1,19 +1,28 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+
 import SignIn from "../SignIn";
 import ChatRoom from "../ChatRoom";
-import "./App.css";
+import SignOut from "../SignOut";
+
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import SignOut from "../SignOut";
+
+import "./App.css";
 
 function App() {
   const [user] = useAuthState(auth);
+  const [currentRoom, setCurrentRoom] = useState("General");
   console.log(user);
   useEffect(() => {}, []);
+
   return (
     <div className="App">
       <header></header>
-      <section>{user ? <ChatRoom /> : <SignIn />}</section>
+
+      <section>
+        {user ? <ChatRoom currentRoom={currentRoom} /> : <SignIn />}
+      </section>
+
       <section>
         <SignOut />
       </section>

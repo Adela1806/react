@@ -127,16 +127,16 @@ p {
   align-items: center;
 }
 
-.sent {
+.message--sent {
   flex-direction: row-reverse;
 }
 
-.sent p {
+.message--sent p {
   color: white;
   background: #0b93f6;
   align-self: flex-end;
 }
-.received p {
+.message--reveived p {
   background: #e5e5ea;
   color: black;
 }

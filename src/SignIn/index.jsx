@@ -1,11 +1,10 @@
 import { useEffect } from "react";
-import { useHistory } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, signInWithGoogle } from "../firebase";
 
 function SignIn() {
-  const [user, loading, error] = useAuthState(auth);
-  const history = useHistory();
+  const [user, loading] = useAuthState(auth);
+
   useEffect(() => {
     if (loading) {
       return;
