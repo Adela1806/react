@@ -1,0 +1,114 @@
+nav {
+  top: 0;
+  z-index: 5;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  position: fixed;
+  max-width: 800px;
+  min-height: 50px;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #24292e;
+  justify-content: space-between;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.7), 0 3px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+.list-menu {
+  left: 0;
+  top: -100vh;
+  width: 100%;
+  z-index: 3;
+  padding: 10px;
+  min-height: 100vh;
+  position: absolute;
+  box-sizing: border-box;
+  transition: all 0.4s ease-in-out;
+  background-color: rgb(128, 128, 128, 0.8);
+}
+
+.menu {
+  padding: 0;
+  background: transparent;
+}
+
+.menu img {
+  top: 2vh;
+  right: 0;
+  padding: 5px;
+  position: absolute;
+}
+
+/* ================ Messages ============== */
+.message {
+  display: flex;
+  align-items: center;
+}
+
+.message .contents {
+  padding: 10px;
+  grid-gap: 10px;
+  display: grid;
+  max-width: 80%;
+  align-items: center;
+  margin-bottom: 10px;
+  grid-template-columns: auto auto auto;
+}
+
+.message .contents .user-name {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.message .contents .photo {
+  grid-column-start: 4;
+  grid-column-end: 4;
+}
+
+.message .contents .text {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.actions button {
+  background: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.message--sent {
+  flex-direction: row-reverse;
+}
+
+.message--sent .contents {
+  color: white;
+  background: #0b93f6;
+  border-radius: 10px 0 10px;
+}
+
+.message--received .contents {
+  color: black;
+  background: #e5e5ea;
+  border-radius: 0 10px 0;
+}
+/* =================== Login ===================== */
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login button {
+  color: #ffffff;
+  min-width: 280px;
+  padding: 15px 0;
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 15px;
+  border-radius: 99px;
+  background-color: rgb(28, 33, 37, 0.9);
+}

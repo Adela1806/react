@@ -1,0 +1,62 @@
+.message {
+  display: flex;
+  align-items: center;
+}
+
+.message .contents {
+  padding: 10px;
+  grid-gap: 10px;
+  display: grid;
+  max-width: 80%;
+  align-items: center;
+  margin-bottom: 10px;
+  grid-template-columns: auto auto auto;
+}
+
+.message .contents .user-name {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.message .contents .photo {
+  grid-column-start: 4;
+  grid-column-end: 4;
+}
+
+.message .contents .text {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.actions button {
+  background: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.message--sent {
+  flex-direction: row-reverse;
+}
+
+.message--sent .contents {
+  color: white;
+  background: #0b93f6;
+  align-self: flex-end;
+  border-radius: 10px 0 10px;
+}
+
+.message--received .contents {
+  color: black;
+  background: #e5e5ea;
+  border-radius: 0 10px 0;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 2px 5px;
+}

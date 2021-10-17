@@ -1,0 +1,16 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login button {
+  color: #ffffff;
+  min-width: 280px;
+  padding: 15px 0;
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 15px;
+  border-radius: 99px;
+  background-color: rgb(28, 33, 37, 0.9);
+}

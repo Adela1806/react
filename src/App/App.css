@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: #282c34;
 }
 
@@ -83,7 +83,7 @@ input {
 
 button {
   background-color: #282c34; /* Green */
-  border: none;
+/* border: none;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -120,9 +120,9 @@ p {
   position: relative;
   color: white;
   text-align: center;
-}
+} */
 
-.message {
+/* .message {
   display: flex;
   align-items: center;
 }
@@ -138,12 +138,60 @@ p {
 }
 .message--reveived p {
   background: #e5e5ea;
-  color: black;
-}
-
+  color: black; */
+/* } */
+/* 
 img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin: 2px 5px;
+} */
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #e6e5e8;
+  background-size: cover;
+  background-image: url("../image/background.jpg");
+}
+
+p {
+  line-height: 24px;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #ffffff;
+  max-width: 110px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #008080;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  margin: 2px 5px;
+  border-radius: 50%;
+  background-color: #008080;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 600px) {
+  .message .contents {
+    max-width: 50%;
+  }
 }

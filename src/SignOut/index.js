@@ -5,7 +5,7 @@ function SignOut({ setShowListMenu }) {
   return (
     auth.currentUser && (
       <button
-        className="logout"
+        className="signout"
         onClick={() => {
           auth.signOut();
           setShowListMenu(false);
