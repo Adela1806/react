@@ -1,0 +1,30 @@
+.rooms {
+  min-width: 100%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-top: 15px;
+  box-sizing: border-box;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #008080;
+}
+
+.rooms ul {
+  font-size: 24px;
+  list-style: none;
+  text-align: center;
+}
+
+.rooms ul li {
+  margin-top: 5px;
+  cursor: pointer;
+  padding: 10px 0;
+  border-radius: 99px;
+  cursor: pointer;
+}
+
+.rooms ul li:hover,
+.rooms ul li.active {
+  background-color: #242a2e;
+}

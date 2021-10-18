@@ -153,7 +153,22 @@ img {
   margin: 0 auto;
   color: #e6e5e8;
   background-size: cover;
-  background-image: url("../image/background.jpg");
+  background-image: url("../images/background.jpg");
+}
+
+.App section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(40, 37, 53);
+}
+
+.app .content {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
 }
 
 p {

@@ -2,6 +2,7 @@ import { useState } from "react";
 import SignOut from "../SignOut";
 import Rooms from "../Rooms";
 
+import "./style.css";
 const NavBar = ({ user, currentRoom, setCurrentRoom }) => {
   const [showListMenu, setShowListMenu] = useState(false);
 
@@ -25,12 +26,12 @@ const NavBar = ({ user, currentRoom, setCurrentRoom }) => {
             }}
           >
             <img
-              src="../images/menu-bars.png"
+              src="/images/menu-bars.png"
               alt="menu"
               style={{ opacity: showListMenu ? 0 : 1 }}
             />
             <img
-              src="../images/menu-bars.png"
+              src="../images/menu-icon.png"
               alt="menu-cross"
               style={{ opacity: showListMenu ? 1 : 0 }}
             />

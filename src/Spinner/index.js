@@ -1,8 +1,11 @@
+import "./style.css";
+
 const Spinner = () => (
   <div className="spinner">
-    <div>
+    <div className="circle">
       <label>Loading...</label>
-      <div />
+
+      <div className="circle-child" />
     </div>
   </div>
 );

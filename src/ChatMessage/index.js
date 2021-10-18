@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { auth } from "../firebase";
 
-function ChatMessage({ message, handleDelete }) {
-  const { id, text, uid, photoURL, userName } = message;
+import "./style.css";
 
+function ChatMessage({ message, handleDelete }) {
+  const { id, text, uid, photoURL, createdAt, userName } = message;
   const messageClass =
-    uid === auth.currentUser.uid ? "message--sent" : "message--reveived";
+    uid === auth.currentUser.uid ? "message--sent" : "message--received";
 
   const [showActionsButtons, setShowActionsButtons] = useState(false);
   const toggleCard = () => {
@@ -36,7 +37,7 @@ function ChatMessage({ message, handleDelete }) {
           }}
           className="actions"
         >
-          <button onClick={() => handleDelete(id)}>Delete</button>
+          <button onClick={() => handleDelete(createdAt, id)}>Delete</button>
         </div>
       </div>
     </div>

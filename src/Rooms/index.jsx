@@ -1,11 +1,15 @@
+import "./style.css";
+
 const Rooms = ({ currentRoom, setShowListMenu, setCurrentRoom }) => {
   const handleRoomChange = (room) => {
     setCurrentRoom(room);
     setShowListMenu(false);
   };
+
   return (
     <div className="rooms">
       <h2>Select room</h2>
+
       <ul>
         <li
           onClick={() => {
@@ -13,16 +17,18 @@ const Rooms = ({ currentRoom, setShowListMenu, setCurrentRoom }) => {
           }}
           className={currentRoom === "TamsutuoiPink" ? "active" : ""}
         >
-          tamsutuoiPink
+          TamSuTuoiPink
         </li>
+
         <li
           onClick={() => {
             handleRoomChange("nhieuchuyen");
           }}
           className={currentRoom === "nhieuchuyen" ? "active" : ""}
         >
-          nhieuchuyen
+          NhieuChuyen
         </li>
+
         <li
           onClick={() => {
             handleRoomChange("General");
@@ -31,21 +37,23 @@ const Rooms = ({ currentRoom, setShowListMenu, setCurrentRoom }) => {
         >
           General
         </li>
+
         <li
           onClick={() => {
             handleRoomChange("banhbeo");
           }}
           className={currentRoom === "banhbeo" ? "active" : ""}
         >
-          banhbeo
+          BanhBeo
         </li>
+
         <li
           onClick={() => {
             handleRoomChange("cakhia");
           }}
           className={currentRoom === "cakhia" ? "active" : ""}
         >
-          cakhia
+          CaKhia
         </li>
       </ul>
     </div>
